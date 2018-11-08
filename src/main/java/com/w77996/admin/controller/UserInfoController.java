@@ -1,5 +1,7 @@
 package com.w77996.admin.controller;
 
+import com.w77996.admin.core.ret.RetResponse;
+import com.w77996.admin.core.ret.RetResult;
 import com.w77996.admin.model.UserInfo;
 import com.w77996.admin.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +29,12 @@ public class UserInfoController {
     }
 
     @PostMapping("/selectById")
-    public UserInfo selectById(Integer id){
-        return userInfoService.selectById(id);
+    public RetResult<UserInfo> selectById(Integer id){
+        UserInfo userInfo = userInfoService.selectById(id);
+        return RetResponse.makeOKRsp(userInfo);
     }
+
+
 
 
 }
