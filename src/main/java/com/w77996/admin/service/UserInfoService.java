@@ -1,5 +1,6 @@
 package com.w77996.admin.service;
 
+import com.github.pagehelper.PageInfo;
 import com.w77996.admin.model.UserInfo;
 
 /**
@@ -9,7 +10,7 @@ import com.w77996.admin.model.UserInfo;
  **/
 public interface UserInfoService {
 
-    UserInfo selectById(Integer id);
+    UserInfo selectById(String id);
 
-
+    PageInfo<UserInfo> selectAll(Integer page, Integer size);
 }

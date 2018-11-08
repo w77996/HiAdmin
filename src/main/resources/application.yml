@@ -3,26 +3,26 @@
 #spring.datasource.password=12345
 #spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 #spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
-##Á¬½Ó³ØÅäÖÃ
+##ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½
 #spring.datasource.initialSize=5
 #spring.datasource.minIdle=5
 #spring.datasource.maxActive=20
-##Á¬½ÓµÈ´ý³¬Ê±Ê±¼ä
+##ï¿½ï¿½ï¿½ÓµÈ´ï¿½ï¿½ï¿½Ê±Ê±ï¿½ï¿½
 #spring.datasource.maxWait=60000
-##ÅäÖÃ¸ô¶à¾Ã½øÐÐÒ»´Î¼ì²â(¼ì²â¿ÉÒÔ¹Ø±ÕµÄ¿ÕÏÐÁ¬½Ó)
+##ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½Ò»ï¿½Î¼ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½Ô¹Ø±ÕµÄ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 #spring.datasource.timeBetweenEvictionRunsMillis=60000
-##ÅäÖÃÁ¬½ÓÔÚ³ØÖÐµÄ×îÐ¡Éú´æÊ±¼ä
+##ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú³ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 #spring.datasource.minEvictableIdleTimeMillis=300000
 #spring.datasource.validationQuery=SELECT 1 FROM DUAL
 #spring.datasource.testWhileIdle=true
 #spring.datasource.testOnBorrow=false
 #spring.datasource.testOnReturn=false
-## ´ò¿ªPSCache£¬²¢ÇÒÖ¸¶¨Ã¿¸öÁ¬½ÓÉÏPSCacheµÄ´óÐ¡
+## ï¿½ï¿½PSCacheï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PSCacheï¿½Ä´ï¿½Ð¡
 #spring.datasource.poolPreparedStatements=true
 #spring.datasource.maxPoolPreparedStatementPerConnectionSize=20
-## ÅäÖÃ¼à¿ØÍ³¼ÆÀ¹½ØµÄfilters£¬È¥µôºó¼à¿Ø½çÃæsqlÎÞ·¨Í³¼Æ£¬'wall'ÓÃÓÚ·À»ðÇ½
+## ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½Í³ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½filtersï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½Ø½ï¿½ï¿½ï¿½sqlï¿½Þ·ï¿½Í³ï¿½Æ£ï¿½'wall'ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½Ç½
 #spring.datasource.filters=stat,wall,slf4j
-## Í¨¹ýconnectPropertiesÊôÐÔÀ´´ò¿ªmergeSql¹¦ÄÜ£»ÂýSQL¼ÇÂ¼
+## Í¨ï¿½ï¿½connectPropertiesï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mergeSqlï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½SQLï¿½ï¿½Â¼
 #spring.datasource.connectionProperties=druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 spring:
     datasource:
@@ -30,17 +30,17 @@ spring:
         driver-class-name: com.mysql.jdbc.Driver
         url: jdbc:mysql://localhost:3306/hi-admin?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&userSSL=true
         username: root
-        password: 12345
-        # Ê¹ÓÃdruidÊý¾ÝÔ´
+        password: root
+        # Ê¹ï¿½ï¿½druidï¿½ï¿½ï¿½ï¿½Ô´
         type: com.alibaba.druid.pool.DruidDataSource
         initialSize: 5
         minIdle: 5
         maxActive: 30
-        ##Á¬½ÓµÈ´ý³¬Ê±Ê±¼ä
+        ##ï¿½ï¿½ï¿½ÓµÈ´ï¿½ï¿½ï¿½Ê±Ê±ï¿½ï¿½
         maxWait: 2000
-        ##ÅäÖÃ¸ô¶à¾Ã½øÐÐÒ»´Î¼ì²â(¼ì²â¿ÉÒÔ¹Ø±ÕµÄ¿ÕÏÐÁ¬½Ó)
+        ##ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½Ò»ï¿½Î¼ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½Ô¹Ø±ÕµÄ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
         timeBetweenEvictionRunsMillis: 60000
-        ##ÅäÖÃÁ¬½ÓÔÚ³ØÖÐµÄ×îÐ¡Éú´æÊ±¼ä
+        ##ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú³ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
         minEvictableIdleTimeMillis: 300000
         validationQuery: SELECT 1 FROM DUAL
         testWhileIdle: true
@@ -54,7 +54,12 @@ spring:
         jackson:
             date-format: yyyy-MM-dd HH:mm:ss
             time-zone: GMT+08
-#mybatis ÅäÖÃ
+    redis:
+       database: 0
+       host: 120.78.170.123
+       password:
+       port: 6379
+#mybatis ï¿½ï¿½ï¿½ï¿½
 mybatis:
     mapperLocations: classpath*:mapper/*.xml
     typeAliasesPackage: com.w77996.admin.model
@@ -62,3 +67,15 @@ mybatis:
     config-location: classpath:mybatis/mybatis-config.xml
 server:
     port: 8888
+logging:
+  level:
+    com:
+      w77996:
+        admin:
+          dao:DEBUG
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params:
+  page-size-zero: true
