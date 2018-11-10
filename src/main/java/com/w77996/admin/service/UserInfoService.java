@@ -13,4 +13,11 @@ public interface UserInfoService {
     UserInfo selectById(String id);
 
     PageInfo<UserInfo> selectAll(Integer page, Integer size);
+
+    /**
+     * 通过用户名查找用户
+     * @param username
+     * @return
+     */
+    UserInfo selectUserInfoByUsername(String username);
 }

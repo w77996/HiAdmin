@@ -2,6 +2,8 @@ package com.w77996.admin.model;
 
 import lombok.Data;
 
+import java.util.Set;
+
 /**
  * @description:
  * @author: w77996
@@ -21,6 +23,21 @@ public class UserInfo {
     private String userName;
 
     private String password;
+
+    /**
+     * 加密盐值
+     */
+    private String salt;
+
+    /**
+     * 用户所有角色值，用于shiro做角色权限的判断
+     */
+    private Set<String> roles;
+
+    /**
+     * 用户所有权限值，用于shiro做资源权限的判断
+     */
+    private Set<String> perms;
 
 
 }

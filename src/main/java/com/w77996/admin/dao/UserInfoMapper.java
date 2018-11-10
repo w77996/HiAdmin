@@ -15,4 +15,6 @@ public interface UserInfoMapper {
     UserInfo selectById(@Param("id") String id);
 
     List<UserInfo> selectAll();
+
+    UserInfo selectUserInfoByUsername(@Param("username") String username);
 }

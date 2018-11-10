@@ -36,4 +36,9 @@ public class UserInfoServiceImpl implements UserInfoService {
         return pageInfo;
     }
 
+    @Override
+    public UserInfo selectUserInfoByUsername(String username) {
+        return userInfoMapper.selectUserInfoByUsername(username);
+    }
+
 }

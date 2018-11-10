@@ -21,6 +21,9 @@ public enum  RetCode {
     /** 未登录 */
     UNAUTHEN(4401),
 
+    /** 未登录 */
+    NOT_FOUND(404111),
+
     /** 未授权，拒绝访问 */
     UNAUTHZ(4403),
 
