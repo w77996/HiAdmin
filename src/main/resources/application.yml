@@ -32,6 +32,11 @@ spring:
        host: 120.78.170.123
        password:
        port: 6379
+# Single file max size
+multipart:
+    maxFileSize: 50Mb
+# All files max size
+    maxRequestSize: 50Mb
 #mybatis
 mybatis:
     mapperLocations: classpath*:mapper/*.xml

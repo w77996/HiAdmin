@@ -1,6 +1,7 @@
 package com.w77996.admin.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.w77996.admin.core.aop.AnnotationLog;
 import com.w77996.admin.core.exception.ServiceException;
 import com.w77996.admin.core.ret.RetResponse;
 import com.w77996.admin.core.ret.RetResult;
@@ -46,6 +47,7 @@ public class UserInfoController {
                     dataType = "Integer", paramType = "query")
     })
     @GetMapping("/selectById")
+    @AnnotationLog(remark = "查询")
     public RetResult<UserInfo> selectById(@RequestParam String id) {
         log.info("enter selectById");
         UserInfo userInfo = userInfoService.selectById(id);
@@ -78,6 +80,7 @@ public class UserInfoController {
     @PostMapping("/login")
     public RetResult<UserInfo> login(String userName, String password) {
         Subject currentUser = SecurityUtils.getSubject();
+        currentUser.getSession().setTimeout(20000L);
         //登录
         try {
             currentUser.login(new UsernamePasswordToken(userName, password));
