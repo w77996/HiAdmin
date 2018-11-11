@@ -125,16 +125,6 @@ public class WebConfigurer extends WebMvcConfigurationSupport {
         });
     }
 
-    private void responseResult(HttpServletResponse response, RetResult<Object> result) {
-        response.setCharacterEncoding("UTF-8");
-        response.setHeader("Content-type", "application/json;charset=UTF-8");
-        response.setStatus(200);
-        try {
-            response.getWriter().write(JSON.toJSONString(result, SerializerFeature.WriteMapNullValue));
-        } catch (IOException ex) {
-            log.error(ex.getMessage());
-        }
-    }
 //    @Override
 //    public void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> exceptionResolvers) {
 //        exceptionResolvers.add(getHandlerExceptionResolver());
@@ -187,22 +177,22 @@ public class WebConfigurer extends WebMvcConfigurationSupport {
 //        return result;
 //    }
 //
-//    /**
-//     * @Title: responseResult
-//     * @Description: 响应结果
-//     * @param response
-//     * @param result
-//     * @Reutrn void
-//     */
-//    private void responseResult(HttpServletResponse response, RetResult<Object> result) {
-//        response.setCharacterEncoding("UTF-8");
-//        response.setHeader("Content-type", "application/json;charset=UTF-8");
-//        response.setStatus(200);
-//        try {
-//            response.getWriter().write(JSON.toJSONString(result,SerializerFeature.WriteMapNullValue));
-//        } catch (IOException ex) {
-//            LOGGER.error(ex.getMessage());
-//        }
-//    }
+    /**
+     * @Title: responseResult
+     * @Description: 响应结果
+     * @param response
+     * @param result
+     * @Reutrn void
+     */
+    private void responseResult(HttpServletResponse response, RetResult<Object> result) {
+        response.setCharacterEncoding("UTF-8");
+        response.setHeader("Content-type", "application/json;charset=UTF-8");
+        response.setStatus(200);
+        try {
+            response.getWriter().write(JSON.toJSONString(result,SerializerFeature.WriteMapNullValue));
+        } catch (IOException ex) {
+            log.error(ex.getMessage());
+        }
+    }
 
 }
