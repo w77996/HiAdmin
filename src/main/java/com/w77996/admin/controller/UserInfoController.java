@@ -1,5 +1,6 @@
 package com.w77996.admin.controller;
 
+import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.w77996.admin.core.aop.AnnotationLog;
 import com.w77996.admin.core.exception.ServiceException;
@@ -73,7 +74,9 @@ public class UserInfoController {
     @PostMapping("/selectAll")
     public RetResult<PageInfo<UserInfo>> selectAll(@RequestParam(defaultValue = "0") Integer page,
                                                    @RequestParam(defaultValue = "0") Integer size) {
-        PageInfo<UserInfo> pageInfo = userInfoService.selectAll(page, size);
+        PageHelper.startPage(page,size);
+        List<UserInfo> userInfoList = userInfoService.selectAll();
+        PageInfo<UserInfo> pageInfo = new PageInfo<>(userInfoList);
         return RetResponse.makeOKRsp(pageInfo);
     }
 

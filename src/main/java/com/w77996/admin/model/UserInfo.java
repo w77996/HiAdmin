@@ -1,6 +1,7 @@
 package com.w77996.admin.model;
 
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 
 import java.util.Set;
 
@@ -15,6 +16,7 @@ public class UserInfo {
     /**
      * 主键
      */
+    @Id
     private String id;
 
     /**

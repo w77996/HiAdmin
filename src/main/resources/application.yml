@@ -52,7 +52,7 @@ logging:
     com:
       w77996:
         admin:
-          dao:DEBUG
+          dao: DEBUG
 pagehelper:
   helper-dialect: mysql
   reasonable: true
