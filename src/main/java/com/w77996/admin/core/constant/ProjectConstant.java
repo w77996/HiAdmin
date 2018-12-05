@@ -2,8 +2,8 @@ package com.w77996.admin.core.constant;
 
 public class ProjectConstant {
 
-	// 项目基础包名称，根据自己公司的项目修改
-	public static final String BASE_PACKAGE = "com.example.demo";
+	// 项目基础包名称
+	public static final String BASE_PACKAGE = "com.w77996.admin";
 
 	// Model所在包
 	public static final String MODEL_PACKAGE = BASE_PACKAGE + ".model";
