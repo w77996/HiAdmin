@@ -104,5 +104,4 @@ fabric.properties
 /mvnw
 /mvnw.cmd
 /.mvn/
-/src/test/
 /.idea/
