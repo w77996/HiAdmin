@@ -15,7 +15,6 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 import java.util.List;
@@ -75,7 +74,7 @@ public class CustomRealm extends AuthorizingRealm {
             log.info("doGetAuthenticationInfo usrename is null");
             throw new AccountException("Null usernames are not allowed by this realm.");
         }
-        UserInfo userDB = userService.selectUserInfoByUsername(username);
+        UserInfo userDB = userService.selectBy("userName",username);
         if (userDB == null) {
             throw new UnknownAccountException("No account found for admin [" + username + "]");
         }
